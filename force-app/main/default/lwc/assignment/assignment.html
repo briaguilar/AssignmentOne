@@ -1,0 +1,40 @@
+<template>
+        <div>
+            <div>
+                <table data-id="topTable">
+                    <tr>
+                        <th>Account Name</th>
+                        <th>Account Industry</th>
+                        <th>Account Sector</th>
+                        <th>Account Phone</th>
+                    </tr>
+                    <tbody data-id="newinputs"></tbody>
+                </table>
+            </div>
+    
+            <div>
+                <table style="margin-top:20px">
+                    <tr>
+                        <td>
+                            <lightning-input style="width:80%" label="Account Name"  value={acctName} onchange={nameInput}>
+                            </lightning-input>
+                        </td>
+                        <td>
+                            <lightning-input style="width:80%" label="Account Industry" id="accountIndustry" value={industry} onchange={industryInput}>
+                            </lightning-input>
+                        </td>
+                        <td>
+                            <lightning-input style="width:80%" label="Account Sector" id="accountSector" value={sector} onchange={sectorInput}>
+                            </lightning-input>
+                        </td>
+                        <td>
+                            <lightning-input style="width:80%" label="Account Phone" id="accountPhone" value={phone} onchange={phoneInput}></lightning-input>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div style="margin-top:15px; margin-right:40px; text-align:right;">
+                <lightning-button id="submitButton" label="Submit" title="Submit" onclick={handleSubmit}></lightning-button>
+            </div>
+        </div>
+    </template>

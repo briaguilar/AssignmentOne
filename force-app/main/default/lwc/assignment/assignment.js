@@ -1,40 +1,46 @@
 import { LightningElement } from 'lwc';
-/* eslint-disable no-console */
-/* eslint no-extra-semi: "error" */
-
 
 
 export default class AssignmentOne extends LightningElement {
-    // @track name;
-    // @track industry;
-    // @track sector;
-    // @track phone;
+    name = '';
+    industry = '';
+    sector = '';
+    phone = '';
 
-    // nameInput(event) {
-    //     this.name = event.target.value;
-    // };
+    nameInput(event) {
+        this.name = event.target.value;
+    }
 
-    // industryInput(event) {
-    //     this.industry = event.target.value;
-    // };
+    industryInput(event) {
+        this.industry = event.target.value;
+    }
 
-    // sectorInput(event) {
-    //     this.sector = event.target.value;
-    // };
+    sectorInput(event) {
+        this.sector = event.target.value;
+    }
 
-    // phoneInput(event) {
-    //     this.phone = event.target.value;
-    // };
+    phoneInput(event) {
+        this.phone = event.target.value;
+    }
 
-    // handleSubmit() {
-    //     //  console.log(this.name);
-    //     //  console.log(this.industry);
-    //     //  console.log(this.sector);
-    //     //  console.log(this.phone);
+    get rowName() {
+        return `${this.name}`;
+    }
 
-    //     const newRow = '<tr><td>' + this.name + '</td><td>' + this.industry + '</td><td>' + this.sector + '</td><td>' + this.phone + '</td></tr>';
-    //     const topTable = this.template.querySelector('.newinputs');
+    get rowIndustry() {
+        return `${this.industry}`;
+    }
 
-    //     topTable.innerHTML = newRow;
-    // };
+    get rowSector() {
+        return `${this.sector}`;
+    }
+
+    get rowPhone() {
+        return `${this.phone}`;
+    }
+
+    // get rowContent() {
+    //     return `${this.name} ${this.industry} ${this.sector} ${this.phone}`;
+    // }
+
 }

@@ -1,22 +1,27 @@
 <template>
         <div>
             <div>
-                <table data-id="topTable">
+                <table class="topTable">
                     <tr>
                         <th>Account Name</th>
                         <th>Account Industry</th>
                         <th>Account Sector</th>
                         <th>Account Phone</th>
                     </tr>
-                    <tbody data-id="newinputs"></tbody>
+                    <tr>
+                        <td>{rowName}</td>
+                        <td>{rowIndustry}</td>
+                        <td>{rowSector}</td>
+                        <td>{rowPhone}</td>
+                    </tr>
                 </table>
             </div>
     
             <div>
-                <table style="margin-top:20px">
+                <table class="bottomTable" style="margin-top:20px">
                     <tr>
                         <td>
-                            <lightning-input style="width:80%" label="Account Name"  value={acctName} onchange={nameInput}>
+                            <lightning-input style="width:80%" label="Account Name"  value={name} onchange={nameInput}>
                             </lightning-input>
                         </td>
                         <td>
@@ -28,7 +33,7 @@
                             </lightning-input>
                         </td>
                         <td>
-                            <lightning-input style="width:80%" label="Account Phone" id="accountPhone" value={phone} onchange={phoneInput}></lightning-input>
+                            <lightning-input style="width:80%" type="number" label="Account Phone" id="accountPhone" value={phone} onchange={phoneInput}></lightning-input>
                         </td>
                     </tr>
                 </table>

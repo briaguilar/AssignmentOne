@@ -39,6 +39,13 @@ export default class AssignmentOne extends LightningElement {
         this.rowIndustry = `${this.industry}`;
         this.rowSector = `${this.sector}`;
         this.rowPhone = `${this.phone}`;
+
+        const inputFields = this.template.querySelectorAll('lightning-input');
+        if (inputFields) {
+            inputFields.forEach(each => {
+                each.value = '';
+            })
+        }
     }
 
 

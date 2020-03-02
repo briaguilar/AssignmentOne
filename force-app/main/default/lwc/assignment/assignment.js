@@ -30,13 +30,15 @@ export default class AssignmentOne extends LightningElement {
 
     @track rowName;
     @track rowIndustry;
+    @track rowSector;
+    @track rowPhone;
 
 
     handleSubmit() {
         this.rowName = `${this.name}`;
-        this.rowIndustry = `${this.rowIndustry}`;
-        this.rowSector = `${this.rowSector}`;
-        this.rowPhone = `${this.rowPhone}`;
+        this.rowIndustry = `${this.industry}`;
+        this.rowSector = `${this.sector}`;
+        this.rowPhone = `${this.phone}`;
     }
 
 

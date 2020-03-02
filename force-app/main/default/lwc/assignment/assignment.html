@@ -1,45 +1,66 @@
 <template>
         <div>
-            <div>
-                <table class="topTable">
-                    <tr>
-                        <th>Account Name</th>
-                        <th>Account Industry</th>
-                        <th>Account Sector</th>
-                        <th>Account Phone</th>
-                    </tr>
-                    <tr>
-                        <td>{rowName}</td>
-                        <td>{rowIndustry}</td>
-                        <td>{rowSector}</td>
-                        <td>{rowPhone}</td>
-                    </tr>
-                </table>
-            </div>
-    
-            <div>
-                <table class="bottomTable" style="margin-top:20px">
-                    <tr>
-                        <td>
-                            <lightning-input style="width:80%" label="Account Name"  value={name} onchange={nameInput}>
-                            </lightning-input>
-                        </td>
-                        <td>
-                            <lightning-input style="width:80%" label="Account Industry" id="accountIndustry" value={industry} onchange={industryInput}>
-                            </lightning-input>
-                        </td>
-                        <td>
-                            <lightning-input style="width:80%" label="Account Sector" id="accountSector" value={sector} onchange={sectorInput}>
-                            </lightning-input>
-                        </td>
-                        <td>
-                            <lightning-input style="width:80%" type="number" label="Account Phone" id="accountPhone" value={phone} onchange={phoneInput}></lightning-input>
-                        </td>
-                    </tr>
-                </table>
-            </div>
-            <div style="margin-top:15px; margin-right:40px; text-align:right;">
-                <lightning-button id="submitButton" label="Submit" title="Submit" onclick={handleSubmit}></lightning-button>
-            </div>
+            <!-- <lightning-layout class="slds-grid_align-space">
+                <lightning-layout-item class="slds-text-heading_medium">
+                    <h3>Account Name</h3>
+                </lightning-layout-item>
+                <lightning-layout-item class="slds-text-heading_medium">
+                    <h3>Account Industry</h3>
+                </lightning-layout-item>
+                <lightning-layout-item class="slds-text-heading_medium">
+                    <h3>Account Sector</h3>
+                </lightning-layout-item>
+                <lightning-layout-item class="slds-text-heading_medium">
+                    <h3>Account Phone</h3>
+                </lightning-layout-item>
+            </lightning-layout>
+
+            <lightning-layout>
+                <lightning-layout-item class="slds-text-body_small">{rowName}</lightning-layout-item>
+            </lightning-layout> -->
+
+            <table class="topTable">
+                <tr>
+                    <th>Account Name</th>
+                    <th>Account Industry</th>
+                    <th>Account Sector</th>
+                    <th>Account Phone</th>
+                </tr>
+                <tr>
+                    <td class="rowName">{rowName}</td>
+                    <td>{rowIndustry}</td>
+                    <td>{rowSector}</td>
+                    <td>{rowPhone}</td>
+                </tr>
+            </table>
         </div>
-    </template>
+
+        <div>
+            <table class="bottomTable" style="margin-top:20px">
+                <tr>
+                    <td>
+                        <lightning-input style="width:80%" label="Account Name"  value={name} onchange={nameInput}>
+                        </lightning-input>
+                    </td>
+                    <td>
+                        <lightning-input style="width:80%" label="Account Industry" id="accountIndustry"
+                            value={industry} onchange={industryInput}>
+                        </lightning-input>
+                    </td>
+                    <td>
+                        <lightning-input style="width:80%" label="Account Sector" id="accountSector" value={sector}
+                            onchange={sectorInput}>
+                        </lightning-input>
+                    </td>
+                    <td>
+                        <lightning-input style="width:80%" type="number" label="Account Phone" id="accountPhone"
+                            value={phone} onchange={phoneInput}></lightning-input>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div style="margin-top:15px; margin-right:40px; text-align:right;">
+            <lightning-button id="submitButton" label="Submit" title="Submit" onclick={handleSubmit}></lightning-button>
+        </div>
+   
+</template>

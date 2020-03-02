@@ -1,12 +1,15 @@
-import { LightningElement } from 'lwc';
+import { LightningElement, track } from 'lwc';
+
 
 
 export default class AssignmentOne extends LightningElement {
-    name = '';
-    industry = '';
-    sector = '';
-    phone = '';
+    @track name = '';
+    @track industry = '';
+    @track sector = '';
+    @track phone = '';
 
+
+    // pulling values from lightning-inputs
     nameInput(event) {
         this.name = event.target.value;
     }
@@ -23,24 +26,37 @@ export default class AssignmentOne extends LightningElement {
         this.phone = event.target.value;
     }
 
-    get rowName() {
-        return `${this.name}`;
-    }
 
-    get rowIndustry() {
-        return `${this.industry}`;
-    }
 
-    get rowSector() {
-        return `${this.sector}`;
-    }
 
-    get rowPhone() {
-        return `${this.phone}`;
-    }
 
-    // get rowContent() {
-    //     return `${this.name} ${this.industry} ${this.sector} ${this.phone}`;
+    // get rowIndustry() {
+    //     return `${this.industry}`;
     // }
+
+    // get rowSector() {
+    //     return `${this.sector}`;
+    // }
+
+    // get rowPhone() {
+    //     return `${this.phone}`;
+    // }
+
+    // get rowName() {
+    //     return `${this.name}`
+    // }
+
+    @track rowName;
+    @track rowIndustry;
+
+
+    handleSubmit() {
+        this.rowName = `${this.name}`;
+        this.rowIndustry = `${this.rowIndustry}`;
+        this.rowSector = `${this.rowSector}`;
+        this.rowPhone = `${this.rowPhone}`;
+    }
+
+
 
 }

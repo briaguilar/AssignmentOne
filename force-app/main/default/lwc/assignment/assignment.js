@@ -28,24 +28,6 @@ export default class AssignmentOne extends LightningElement {
 
 
 
-
-
-    // get rowIndustry() {
-    //     return `${this.industry}`;
-    // }
-
-    // get rowSector() {
-    //     return `${this.sector}`;
-    // }
-
-    // get rowPhone() {
-    //     return `${this.phone}`;
-    // }
-
-    // get rowName() {
-    //     return `${this.name}`
-    // }
-
     @track rowName;
     @track rowIndustry;
 

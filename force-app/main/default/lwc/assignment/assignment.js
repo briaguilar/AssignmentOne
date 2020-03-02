@@ -21,7 +21,7 @@ export default class AssignmentOne extends LightningElement {
     sectorInput(event) {
         this.sector = event.target.value;
     }
-
+    
     phoneInput(event) {
         this.phone = event.target.value;
     }

@@ -1,23 +1,5 @@
 <template>
         <div>
-            <!-- <lightning-layout class="slds-grid_align-space">
-                <lightning-layout-item class="slds-text-heading_medium">
-                    <h3>Account Name</h3>
-                </lightning-layout-item>
-                <lightning-layout-item class="slds-text-heading_medium">
-                    <h3>Account Industry</h3>
-                </lightning-layout-item>
-                <lightning-layout-item class="slds-text-heading_medium">
-                    <h3>Account Sector</h3>
-                </lightning-layout-item>
-                <lightning-layout-item class="slds-text-heading_medium">
-                    <h3>Account Phone</h3>
-                </lightning-layout-item>
-            </lightning-layout>
-
-            <lightning-layout>
-                <lightning-layout-item class="slds-text-body_small">{rowName}</lightning-layout-item>
-            </lightning-layout> -->
 
             <table class="topTable">
                 <tr>
@@ -26,12 +8,17 @@
                     <th>Account Sector</th>
                     <th>Account Phone</th>
                 </tr>
-                <tr>
-                    <td>{rowName}</td>
-                    <td>{rowIndustry}</td>
-                    <td>{rowSector}</td>
-                    <td>{rowPhone}</td>
-                </tr>
+                 <!-- <tr> -->
+                
+                <template for:each={rows} for:item="row">
+                    <tr key={rows}>
+                        <td key={row.name}>{rowName}</td>
+                        <td key={row.industry}>{rowIndustry}</td>
+                        <td key={row.sector}>{rowSector}</td>
+                        <td key={rows.phone}>{rowPhone}</td>
+                    </tr>
+                </template>
+                
             </table>
         </div>
 

@@ -1,7 +1,6 @@
 import { LightningElement, track } from 'lwc';
 
 
-
 export default class AssignmentOne extends LightningElement {
     @track name = '';
     @track industry = '';
@@ -28,18 +27,25 @@ export default class AssignmentOne extends LightningElement {
 
 
 
+
     @track rowName;
     @track rowIndustry;
     @track rowSector;
     @track rowPhone;
-
+    @track rows;
+    @track index;
+   
+   
+    
 
     handleSubmit() {
+        // Renders user inputs into top table
         this.rowName = `${this.name}`;
         this.rowIndustry = `${this.industry}`;
         this.rowSector = `${this.sector}`;
         this.rowPhone = `${this.phone}`;
 
+        // Resets all of the forms on page
         const inputFields = this.template.querySelectorAll('lightning-input');
         if (inputFields) {
             inputFields.forEach(each => {
@@ -48,6 +54,13 @@ export default class AssignmentOne extends LightningElement {
         }
     }
 
-
+    rows = [
+        {
+            name: this.rowName,
+            industry: this.rowIndustry,
+            sector: this.rowSector,
+            phone: this.rowPhone
+        }
+    ]
 
 }
